@@ -1,2 +1,9 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<div class="skill-set">
+  <% @skills.each do |skill| %>
+    <% if skill == "Search" %>
+      <i class="fas fa-search"></i>
+    <% else %>
+      <p class="btn btn-warning"><%= skill %></p>
+    <% end %>
+  <% end %>
+</div>
