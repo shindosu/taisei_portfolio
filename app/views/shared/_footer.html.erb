@@ -1,0 +1,25 @@
+<footer class="d-flex justify-content-between">
+<% if current_page?(root_path) %>
+  <div class="left-side">
+    <h1>Taisei</h1>
+    <p>Full Stack Developer</p>
+  </div>
+  <div class="right-side">
+    <%= link_to "Projects", projects_path %>  
+  </div>
+<% elsif current_page?(projects_path)%>
+  <div class="left-side">
+    <%= link_to "Home", root_path %>  
+  </div>
+  <div class="right-side">
+    <%= link_to "Contact", contact_path %>  
+  </div>
+<% elsif current_page?(contacts_contact_me_path)%>
+  <div class="left-side">
+    <%= link_to "Projects", projects_path %>  
+  </div>
+  <div class="right-side">
+    <%= link_to "Home", root_path %>  
+  </div>
+<% end %>
+</footer>
