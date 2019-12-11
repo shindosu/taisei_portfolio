@@ -1,9 +1,19 @@
-<div class="skill-set">
+<div class="skill-set d-flex justify-content-center">
   <% @skills.each do |skill| %>
     <% if skill == "Search" %>
       <i class="fas fa-search"></i>
+    <% elsif skill == "All" %>
+      <p class="btn btn-danger mr-5"><%= skill %></p>
     <% else %>
-      <p class="btn btn-warning"><%= skill %></p>
+      <p class="pr-5"><%= skill %></p>
     <% end %>
+  <% end %>
+</div>
+
+<div class="d-flex justify-content-center">
+  <% @projects.each do |project| %>
+    <div class="card mr-5">
+      <%= image_tag(project.thumbnail, size: "350x182")%>
+    </div>
   <% end %>
 </div>
