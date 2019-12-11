@@ -1,0 +1,12 @@
+<% if current_page?(contact_path)%>
+  <div class="left-side">
+    <%= link_to projects_path do %>
+      <p><i class="fas fa-arrow-left"></i> Projects</p>
+    <% end %> 
+  </div>
+  <div class="right-side">
+    <%= link_to root_path do %>
+      <p>Home <i class="fas fa-arrow-right"></i></p>
+    <% end %> 
+  </div>
+<% end %>
