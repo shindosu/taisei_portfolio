@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(version: 2019_12_10_200455) do
     t.string "thumbnail"
     t.string "user_journey_image"
     t.string "skill"
-    t.boolean "responsiveness"
+    t.boolean "responsiveness", default: false
     t.string "code_link"
     t.string "demo_link"
     t.datetime "created_at", null: false
