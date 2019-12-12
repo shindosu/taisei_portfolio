@@ -1,7 +1,11 @@
 <% if current_page?(projects_path)%>
   <div class="left-side">
     <%= link_to root_path do %>
-      <p><i class="fas fa-arrow-left"></i> Home </p>
+      <span class="fa-stack fa-2x">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-arrow-left fa-stack-1x fa-inverse"></i> 
+      </span>   
+      <p>Home </p>
     <% end %> 
   </div>
   <div class="right-side">
