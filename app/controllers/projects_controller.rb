@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def index
+    @contacts = Contact.all
     @skills = %w(All Ruby\ on\ Rails Javascript Search)
     if params[:query].present?
       sql_query = "title ILIKE :query OR skill ILIKE :query"
