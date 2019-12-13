@@ -2,3 +2,12 @@
   width: 82px;
   height: 82px;
 }
+
+.nav-link{
+  color: black;
+  transition-duration: 0.2s;
+  padding: 0; //m-3
+  &:hover{
+    color: $red;
+  }
+}
