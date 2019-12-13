@@ -1,0 +1,25 @@
+.list-group-item{
+  font-size: 0.8em;
+  color: #535353;
+  opacity: 80%;
+}
+
+.modal-body{
+  background-color: #F4F4F4
+}
+
+.responsive{
+  border: 1px solid rgb(199, 67, 67);
+  border-radius: 0;
+  background-color: $red;
+  color: white;
+  font-size: 0.8em;
+}
+
+.not-responsive{
+  border: 1px solid $gray;
+  border-radius: 0;
+  background-color: #B8B8B8;
+  color: white;
+  font-size: 0.8em;
+}

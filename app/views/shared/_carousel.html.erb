@@ -2,9 +2,9 @@
   <ol class="carousel-indicators">
     <% project.user_journey_image.gsub('"', '').gsub(/(\[|\]|\s)/,"").split(",").each_with_index do |image, index| %>
       <% if index == 0 %>
-        <li data-target="#carousel<%= project.title.downcase.gsub(" ","_") %>" data-slide-to="<%=index%>" class="active"></li>
+        <li data-target="#carousel<%= project.title.downcase.gsub(" ","_") %>" data-slide-to="<%=index%>" class="active mx-2"></li>
       <% else %>
-        <li data-target="#carousel<%= project.title.downcase.gsub(" ","_") %>" data-slide-to="<%=index%>"></li>
+        <li data-target="#carousel<%= project.title.downcase.gsub(" ","_") %>" data-slide-to="<%=index%>" class="mx-2"></li>
       <% end %>    
     <% end %>
   </ol>
@@ -12,11 +12,11 @@
     <% project.user_journey_image.gsub('"', '').gsub(/(\[|\]|\s)/,"").split(",").each_with_index do |image, index| %>
       <% if index == 0 %>
         <div class="carousel-item active">
-          <%= image_tag(project.user_journey_image.gsub('"', '').gsub(/(\[|\]|\s)/,"").split(",").first, class: "d-block w-100")%>
+          <%= image_tag(project.user_journey_image.gsub('"', '').gsub(/(\[|\]|\s)/,"").split(",").first, class: "d-block w-100", size: "800x450")%>
         </div>
       <% else %>
         <div class="carousel-item">
-          <%= image_tag(image, class: "d-block w-100")%>
+          <%= image_tag(image, class: "d-block w-100", size: "800x450")%>
         </div>
       <% end %>
     <% end %>
