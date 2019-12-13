@@ -1,0 +1,6 @@
+$modal = $('.modal'),
+$modalBody = $('.modal .modal-body'),
+$modalHeading = $('.modal .modal-heading');
+$modalHeading.html("<%= @project.title %>");
+$modalBody.html("<%= escape_javascript(render @show) %>");
+$modal.modal();
