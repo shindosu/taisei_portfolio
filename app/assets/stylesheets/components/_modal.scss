@@ -23,3 +23,19 @@
   color: white;
   font-size: 0.8em;
 }
+
+.info{
+  border-color: rgb(153, 153, 153);
+  h3{
+    color: $red;
+    letter-spacing: 0.006em;
+  }
+  .catch-phrase{
+    position: relative;
+    bottom: 10px;
+    font-size: 1.3em;
+  }
+  p{
+    color: black;
+  }
+}

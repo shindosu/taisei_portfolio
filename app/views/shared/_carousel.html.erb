@@ -1,5 +1,5 @@
 <div id="carousel<%= project.title.downcase.gsub(" ","_") %>" class="carousel slide" data-ride="carousel" data-interval="false">
-  <ol class="carousel-indicators">
+  <ol class="carousel-indicators mb-1">
     <% project.user_journey_image.gsub('"', '').gsub(/(\[|\]|\s)/,"").split(",").each_with_index do |image, index| %>
       <% if index == 0 %>
         <li data-target="#carousel<%= project.title.downcase.gsub(" ","_") %>" data-slide-to="<%=index%>" class="active mx-2"></li>
