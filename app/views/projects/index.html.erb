@@ -13,10 +13,10 @@
 <div class="d-flex justify-content-center">
   <% @projects.each do |project| %>
     <%= link_to "##{project.title.downcase.gsub(" ", "_")}", data: {toggle: "modal"} do %>
-    <%= render 'shared/show_modal', project: project %>
       <div class="card mr-5 border-0">
         <%= image_tag(project.thumbnail, size: "350x182")%>
       </div>
     <% end %>
+    <%= render 'shared/show_modal', project: project %>
   <% end %>
 </div>
