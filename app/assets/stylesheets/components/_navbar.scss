@@ -1,3 +1,8 @@
+.nav{
+  position: absolute;
+  left: 0;
+}
+
 .logo{
   width: 82px;
   height: 82px;
@@ -9,9 +14,21 @@
   padding: 0; //m-3
   &:hover{
     color: $red;
+    text-decoration: none;
   }
 }
 
 .active-link{
   color: $red;
+  &:hover{
+    color: $red;
+    text-decoration: none;
+  }
+}
+
+.page-link{
+  position: relative;
+  top: 70px;
+  background-color: none;
+  border: 0;
 }
