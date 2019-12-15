@@ -4,9 +4,9 @@
     <% if skill == "Search" %>
       <p class="btn" id="search"><i class="fas fa-search"></i></p>
     <% elsif skill == "All" %>
-      <p class="btn btn-danger mr-4 px-4"><%= skill %></p>
+      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4" %>
     <% else %>
-      <p class="btn mr-4 px-4"><%= skill %></p>
+      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4" %>
     <% end %>
   <% end %>
 </div>
@@ -23,17 +23,15 @@
   </div>
 </div>
 
-<div class="w-50 d-none">
-    <%= simple_form_for projects_path, method: :get, html:{class: "search-form d-flex ml-3 mt-3"} do %>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control mr-2",
-      placeholder: "Search a topic or category"
-      %>
-      <%= button_tag(type: "submit", class: "btn btn-default") do %>
+<div class="w-50">
+  <%= simple_form_for projects_path, method: :get, html:{class: "search-form d-flex ml-3 mt-3"} do %>
+  <%= text_field_tag :query,
+  params[:query],
+  class: "form-control mr-2",
+    placeholder: "Search a topic or category"
+    %>
+    <%= button_tag(type: "submit", class: "btn btn-default") do %>
       <i class="fas fa-search"></i>
-      <% end %>
-      <% end %>
+    <% end %>
+  <% end %>
   </div>
-
-
