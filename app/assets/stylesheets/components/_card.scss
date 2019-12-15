@@ -3,3 +3,10 @@
   -moz-box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
   box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
 }
+
+.card-image{
+  transition-duration: 0.3s;
+  &:hover{
+    opacity: 0.2;
+  }
+}

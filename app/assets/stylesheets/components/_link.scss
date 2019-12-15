@@ -1,57 +1,29 @@
-.right-side{
-  a{
+.right-side, .left-side{
+  font-size: 1.3em;
+  a, p{
   color: black;
-  transition-duration: 0.2s;    
+  transition-duration: 1s;    
   &:hover{
     text-decoration: none;
     color: $red;
-
     .arrow::before{
       opacity: 1;
     }
   }
+  i::before{
+    transition-duration: 1s;
   }
-}
-
-.text-right{
-  a{
-  color: black;
-  transition-duration: 0.2s;    
   &:hover{
-    text-decoration-line: none;
-    color: $red;
-
-    .arrow::before{
+    text-decoration: none;
+    i::before{
       opacity: 1;
     }
   }
-  }
+}     
 }
 
 #about{
+  font-size: 1.0em;
   position: absolute;
-  right: 0;
-  transition-duration: 0.2s;
-  &:hover{
-    text-decoration: none;
-    color: $red;
-
-    .arrow::before{
-      opacity: 1;
-    }
+  right: 0;     
   }
-}
-
-.left-side{
-  a{
-  transition-duration: 0.2s;    
-  &:hover{
-    text-decoration: none;
-    color: $red;
-
-    .arrow::before{
-      opacity: 1;
-    }
-  }
-  }
-}

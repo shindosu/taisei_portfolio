@@ -46,4 +46,28 @@ Project.create!(
   demo_link: "ronpa.org"
 )
 
+Project.create!(
+  title: "Ronpa",
+  catch_phrase: "Online debating platform",
+  description: "Ronpa is an online debating platform that allows you to debate about virtually anything live with users around the world. If you want to enhance your communication and persuasion skills and learn about a toipic simultaneously, Ronpa is the app to use!",
+  thumbnail: "ronpa_thumbnail.png",
+  user_journey_image: %w(ronpa1.png ronpa2.png ronpa3.png ronpa4.png ronpa5.png ronpa6.png ronpa7.png ronpa8.png),
+  skill: %w(HTML CSS Javascript Ruby\ on\ Rails Action\ Cable),
+  responsiveness: false,
+  code_link: "github.com/shindosu/ronpa",
+  demo_link: "ronpa.org"
+)
+
+Project.create!(
+  title: "Ronpa",
+  catch_phrase: "Online debating platform",
+  description: "Ronpa is an online debating platform that allows you to debate about virtually anything live with users around the world. If you want to enhance your communication and persuasion skills and learn about a toipic simultaneously, Ronpa is the app to use!",
+  thumbnail: "ronpa_thumbnail.png",
+  user_journey_image: %w(ronpa1.png ronpa2.png ronpa3.png ronpa4.png ronpa5.png ronpa6.png ronpa7.png ronpa8.png),
+  skill: %w(HTML CSS Javascript Ruby\ on\ Rails Action\ Cable),
+  responsiveness: false,
+  code_link: "github.com/shindosu/ronpa",
+  demo_link: "ronpa.org"
+)
+
 puts "Done! Created #{Project.count} projects"
