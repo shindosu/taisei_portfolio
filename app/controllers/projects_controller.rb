@@ -4,9 +4,9 @@ class ProjectsController < ApplicationController
     @skills = %w(All Ruby\ on\ Rails Javascript Action\ Cable Search)
     if params[:query].present?
       sql_query = "title ILIKE :query OR skill ILIKE :query"
-      @projects = Project.where(sql_query, query: "%#{params[:query]}%")
+      @projects = Project.where(sql_query, query: "%#{params[:query]}%").order("LOWER(title)")
     elsif params[:skill]
-      @projects = Project.where("skill ILIKE :query", query: "%#{params[:skill]}%")
+      @projects = Project.where("skill ILIKE :query", query: "%#{params[:skill]}%").order("LOWER(title)")
     else
       @projects = Project.all.order("LOWER(title)")
     end
