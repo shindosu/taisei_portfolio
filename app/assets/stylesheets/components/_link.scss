@@ -1,9 +1,57 @@
 .right-side{
-  p{
-  color: black;    
+  a{
+  color: black;
+  transition-duration: 0.2s;    
+  &:hover{
+    text-decoration: none;
+    color: $red;
+
+    .arrow::before{
+      opacity: 1;
+    }
+  }
+  }
+}
+
+.text-right{
+  a{
+  color: black;
+  transition-duration: 0.2s;    
   &:hover{
     text-decoration-line: none;
-  }
-  }
+    color: $red;
 
+    .arrow::before{
+      opacity: 1;
+    }
+  }
+  }
+}
+
+#about{
+  position: absolute;
+  right: 0;
+  transition-duration: 0.2s;
+  &:hover{
+    text-decoration: none;
+    color: $red;
+
+    .arrow::before{
+      opacity: 1;
+    }
+  }
+}
+
+.left-side{
+  a{
+  transition-duration: 0.2s;    
+  &:hover{
+    text-decoration: none;
+    color: $red;
+
+    .arrow::before{
+      opacity: 1;
+    }
+  }
+  }
 }

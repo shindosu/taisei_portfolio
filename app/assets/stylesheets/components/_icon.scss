@@ -1,4 +1,26 @@
-.fa-circle{
-  color: #ED6C6C;
+.arrow{
+  border: 1px solid #ED6C6C;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: $red;
+  color: white;
+  &::before{
+    opacity: 80%;
+  }
 }
 
+.social_icons{
+  a{
+    &:hover{
+      text-decoration: none;
+      i::before{
+        opacity: 1;
+      }
+    }
+  }    
+}
+
+#facebook{
+  padding-left: 13px;
+  padding-right: 13px;
+}
