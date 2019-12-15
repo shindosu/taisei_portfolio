@@ -4,18 +4,18 @@
     <% if skill == "Search" %>
       <p class="btn" id="search"><i class="fas fa-search"></i></p>
     <% elsif skill == "All" %>
-      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4" %>
+      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4 h-100 rounded-0" %>
     <% else %>
-      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4" %>
+      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4 h-100 rounded-0" %>
     <% end %>
   <% end %>
 </div>
 
-  <div class="d-flex justify-content-center">
+  <div class="d-flex justify-content-center mt-5">
     <% @projects.each do |project| %>
-      <%= link_to "##{project.title.downcase.gsub(" ", "_")}", data: {toggle: "modal"} do %>
-        <div class="card mr-5 border-0">
-          <%= image_tag(project.thumbnail, size: "250x150")%>
+      <%= link_to "##{project.title.downcase.gsub(" ", "_")}", data: {toggle: "modal"}, class: "card-link" do %>
+        <div class="card border-0">
+          <%= image_tag(project.thumbnail, size: "250x150", class: "card-image")%>
         </div>
       <% end %>
       <%= render 'shared/show_modal', project: project %>
@@ -23,12 +23,12 @@
   </div>
 </div>
 
-<div class="w-50">
+<div class="w-50 d-none">
   <%= simple_form_for projects_path, method: :get, html:{class: "search-form d-flex ml-3 mt-3"} do %>
   <%= text_field_tag :query,
   params[:query],
   class: "form-control mr-2",
-    placeholder: "Search a topic or category"
+    placeholder: "Ruby, Responsive, etc.."
     %>
     <%= button_tag(type: "submit", class: "btn btn-default") do %>
       <i class="fas fa-search"></i>

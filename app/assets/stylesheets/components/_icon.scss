@@ -11,6 +11,9 @@
 
 .social_icons{
   a{
+    i::before{
+      transition-duration: 0.2s;
+    }
     &:hover{
       text-decoration: none;
       i::before{

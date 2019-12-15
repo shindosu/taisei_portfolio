@@ -1,0 +1,25 @@
+.skill-set{
+  .btn{
+    transition-duration: 0.2s;
+    &:hover{
+      color: $red;
+    }
+  }
+  #search{
+    transition-duration: 0.2s;
+    &:hover{
+      color: $red;
+    }
+  }
+  .btn-danger{
+    &:hover{
+      color: white;
+    }
+    &:focus{
+      box-shadow:none;
+    }
+    &:active{
+      box-shadow: none;
+    }
+  }
+}

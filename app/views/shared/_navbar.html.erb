@@ -1,17 +1,17 @@
-<ul class="nav flex-column w-25">
+<ul class="nav flex-column w-25 ml-5 mt-4">
   <li class="nav-item">
     <%= link_to root_path do %>
       <%= image_tag 'logo', class: "logo" %>
     <% end %>
   </li>
-  <li class="nav-item m-3 w-25">
+  <li class="nav-item m-3 w-25 not-logo-link">
     <% if current_page?(projects_path)%>
       <%= link_to 'Projects', projects_path, class: "active-link"%>
     <% else %>
       <%= link_to 'Projects', projects_path, class: "nav-link"%>
     <% end %>
   </li>
-  <li class="nav-item m-3 w-25">
+  <li class="nav-item m-3 w-25 not-logo-link">
     <% if current_page?(new_contact_path)%>
       <%= link_to 'Contacts', new_contact_path, class: "active-link"%>
     <% else %>
