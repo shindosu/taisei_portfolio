@@ -1,3 +1,15 @@
+.card-holder{
+  // flex-wrap: wrap;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+}
+
+.card-holder::after{
+  content: "";
+  flex: auto;
+}
+
 .card{
   -webkit-box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
   -moz-box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
@@ -7,6 +19,6 @@
 .card-image{
   transition-duration: 0.3s;
   &:hover{
-    opacity: 0.2;
+    opacity: 0.1;
   }
 }
