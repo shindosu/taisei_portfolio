@@ -11,10 +11,4 @@
   border-radius: 0;
   color: #A0A0A0;
   margin-bottom: 7%;
-  &:focus{
-    border: 1px solid $red;
-    box-shadow: 0 0 0 0.2rem rgb(238, 203, 203);
-    outline: 0;
-    border-radius: 2px;
-  }
 }

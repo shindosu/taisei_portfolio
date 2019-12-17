@@ -4,9 +4,9 @@
     <% if skill == "Search" %>
       <p class="btn" id="search"><i class="fas fa-search"></i></p>
     <% elsif skill == "All" %>
-      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4 h-100 rounded-0 button-links", remote: true%>
+      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4 h-100 rounded-0", remote: true%>
     <% else %>
-      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4 h-100 rounded-0 button-links", remote: true %>
+      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4 h-100 rounded-0", remote: true %>
     <% end %>
   <% end %>
 </div>
