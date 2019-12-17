@@ -9,17 +9,21 @@ cardHolder.forEach(function(card){
   }
 })
 
+
 //add red btn
 button = document.querySelectorAll('.btn');
 button_array = [button[0], button[1], button[2], button[3]];
-
-function handleClick(event){
+skill = "<%= params[:skill] %>".toLowerCase()
+function handleClick(){
   button_array.forEach(element => {
-    element.classList.remove('btn-danger');     
+    element.classList.remove('btn-danger');
   });
-  event.currentTarget.classList.add('btn-danger'); 
+  button_array.forEach(element => {
+    if (element.innerText.toLowerCase() == (skill || "all")){
+      console.log(`${element.innerText.toLowerCase()} ` + skill);
+      element.classList.add('btn-danger');
+    }
+  });
 };
 
-button_array.forEach(element => {
-  element.addEventListener("click", (handleClick))
-});
+handleClick();
