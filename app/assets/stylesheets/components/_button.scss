@@ -4,22 +4,32 @@
     &:hover{
       color: $red;
     }
-  }
-  #search{
-    transition-duration: 0.2s;
-    &:hover{
-      color: $red;
-    }
-  }
-  .btn-danger{
-    &:hover{
-      color: white;
-    }
     &:focus{
       box-shadow:none;
     }
-    &:active{
-      box-shadow: none;
+  }
+
+  .btn-danger{
+    &:hover{
+      color: white;
+      background-color: #e94a4a;
     }
+    &:focus{
+      box-shadow:none;
+      background-color: $red;
+      border-color: $red;
+    }
+  }
+}
+
+.submit-button{
+  &:focus{
+    border: 1px solid $red;
+    box-shadow: 0 0 0 0.2rem rgb(238, 203, 203);
+    outline: 0;
+    border-radius: 2px;
+  }
+  &:focus{
+    box-shadow:none;
   }
 }
