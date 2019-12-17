@@ -1,0 +1,25 @@
+//Hide cards in which the skills don't match 
+cardHolder = document.querySelectorAll(".card")
+cardHolder.forEach(function(card){
+  if (!card.querySelector('.d-none').innerText.includes("<%= params[:skill] %>")){
+    card.classList.add("d-none")
+  }
+  else{
+    card.classList.remove("d-none");
+  }
+})
+
+//add red btn
+button = document.querySelectorAll('.btn');
+button_array = [button[0], button[1], button[2], button[3]];
+
+function handleClick(event){
+  button_array.forEach(element => {
+    element.classList.remove('btn-danger');     
+  });
+  event.currentTarget.classList.add('btn-danger'); 
+};
+
+button_array.forEach(element => {
+  element.addEventListener("click", (handleClick))
+});
