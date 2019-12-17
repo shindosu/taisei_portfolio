@@ -49,6 +49,7 @@ Rails.application.configure do
   #   enable_starttls_auto: true
   # }
 
+  config.action_view.embed_authenticity_token_in_remote_forms = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local

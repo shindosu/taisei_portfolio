@@ -1,23 +1,19 @@
 <div class="container">
 <div class="skill-set d-flex justify-content-center">
-  <% @skills.each do |skill| %>
+  <% @skills.each_with_index do |skill, index| %>
     <% if skill == "Search" %>
       <p class="btn" id="search"><i class="fas fa-search"></i></p>
     <% elsif skill == "All" %>
-      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4 h-100 rounded-0" %>
+      <%= link_to skill, projects_path, class: "btn btn-danger mr-4 px-4 h-100 rounded-0", id: "btn-#{index}", remote: true%>
     <% else %>
-      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4 h-100 rounded-0" %>
+      <%= link_to skill, projects_path(skill: skill), class: "btn mr-4 px-4 h-100 rounded-0", id: "btn-#{index}", remote: true %>
     <% end %>
   <% end %>
 </div>
 
   <div class="d-flex mt-5 card-holder w-75">
     <% @projects.each do |project| %>
-      <%= link_to "##{project.title.downcase.gsub(" ", "_")}", data: {toggle: "modal"}, class: "card-link" do %>
-        <div class="card border-0 mb-5 mr-4">
-          <%= image_tag(project.thumbnail, size: "250x150", class: "card-image")%>
-        </div>
-      <% end %>
+      <%= render 'shared/card', project: project %>
       <%= render 'shared/show_modal', project: project %>
     <% end %>
   </div>

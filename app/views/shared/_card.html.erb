@@ -1,0 +1,6 @@
+<%= link_to "##{project.title.downcase.gsub(" ", "_")}", data: {toggle: "modal"}, class: "card-link" do %>
+  <div class="card border-0 mb-5 mr-4">
+    <%= image_tag(project.thumbnail, size: "250x150", class: "card-image")%>
+    <p class="d-none"><%= project.skill %></p>
+  </div>
+<% end %>
