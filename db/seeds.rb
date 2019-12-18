@@ -6,6 +6,8 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+require 'rest-client'
+
 puts "Deleting all projects.."
 Project.destroy_all
 puts "Deleted projects, creating new ones.."
@@ -45,5 +47,17 @@ Project.create!(
   code_link: "github.com/shindosu/ronpa",
   demo_link: "ronpa.org"
 )
+
+def send_simple_message
+  RestClient.post "https://api:cadc099e311db879a9b18abf474e6f39-f8b3d330-e22b054d"\
+  "@api.mailgun.net/v3/sandbox59a01f4416d643679f4fdda55074af97.mailgun.org/messages",
+  :from => "Excited User <mailgun@sandbox59a01f4416d643679f4fdda55074af97.mailgun.org>",
+  :to => "taiseiyamadashindosu@gmail.com",
+  :subject => "Hello",
+  :text => "Testing some Mailgun awesomness!"
+  puts "message sent!"
+end
+
+send_simple_message
 
 puts "Done! Created #{Project.count} projects"

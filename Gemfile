@@ -17,6 +17,9 @@ gem 'webpacker'
 gem 'mail_form'
 gem 'dotenv-rails', groups: [:development, :test]
 gem 'sendmail', '~> 0.0.1'
+gem 'rest-client', '~> 2.1'
+gem 'mailgun-ruby', '~>1.1.6'
+gem 'mailgun_rails'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
