@@ -73,8 +73,8 @@ Rails.application.configure do
   config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors= true
   config.action_mailer.mailgun_settings = {
-    api_key: 'cadc099e311db879a9b18abf474e6f39-f8b3d330-e22b054d',
-    domain: 'sandbox59a01f4416d643679f4fdda55074af97.mailgun.org',
+    api_key: ENV["MAILGUN_API_KEY"],
+    domain: ENV["MAILGUN_DOMAIN"],
     # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
   }
   
