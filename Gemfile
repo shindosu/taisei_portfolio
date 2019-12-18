@@ -16,6 +16,7 @@ gem 'uglifier'
 gem 'webpacker'
 gem 'mail_form'
 gem 'dotenv-rails', groups: [:development, :test]
+gem 'sendmail', '~> 0.0.1'
 
 group :development do
   gem 'web-console', '>= 3.3.0'
