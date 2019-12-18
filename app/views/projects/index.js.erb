@@ -20,7 +20,6 @@ function handleClick(){
   });
   button_array.forEach(element => {
     if (element.innerText.toLowerCase() == (skill || "all")){
-      console.log(`${element.innerText.toLowerCase()} ` + skill);
       element.classList.add('btn-danger');
     }
   });

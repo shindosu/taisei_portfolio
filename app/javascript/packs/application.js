@@ -1,5 +1,4 @@
 import "bootstrap";
-// import "component/button_select";
-// import {changeState} from "component/card";
+import {changeOpacity} from "component/card";
 
-// changeState();
+changeOpacity();

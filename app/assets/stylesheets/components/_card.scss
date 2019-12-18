@@ -14,11 +14,30 @@
   -webkit-box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
   -moz-box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
   box-shadow: 7px 7px 22px -8px rgba(158,158,158,0.20);
+  transition-duration: 1s;
 }
 
 .card-image{
   transition-duration: 0.3s;
-  &:hover{
-    opacity: 0.1;
-  }
+}
+
+.card-title, .card-description, .card-catch-phrase{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.card-title{
+  font-size: 1.3em;
+  color: $red;
+}
+
+.card-description{
+  font-size: 0.8em;
+  color: black;
 }
