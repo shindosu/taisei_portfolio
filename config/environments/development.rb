@@ -28,37 +28,28 @@ Rails.application.configure do
   end
 
   # MAiler
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host:'localhost', port: '3000' }
-  config.action_mailer.perform_deliveries = true
+  # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
+  config.action_mailer.default_url_options = { host:'localhost', port: '3000' }
+  config.action_mailer.delivery_method = :sendmail
+  #send email in dev mode
+  config.action_mailer.perform_deliveries = true
+  config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors= true
 
-  # # config.action_mailer.delivery_method = :smtp
-  # ActionMailer::Base.delivery_method = :smtp
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  # config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  # # config.action_mailer.smtp_settings = {
-  # ActionMailer::Base.smtp_settings = {
-  #   address: "smtp.gmail.com",
-  #   port: 587,
-  #   domain: 'gmail.com',
-  #   user_name: ENV['GMAIL_ADDRESS'],
-  #   password: ENV['GMAIL_APP_PASSWORD'],
-  #   authentication: 'plain',
-  #   enable_starttls_auto: true
-  # }
+  config.action_mailer.sendmail_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            ENV["GMAIL_EMAIL"],
+    password:             ENV["GMAIL_PASSWORD"],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
 
   config.action_view.embed_authenticity_token_in_remote_forms = true
 
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
-
-  # Don't care if the mailer can't send.
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.perform_deliveries = true
-
-  config.action_mailer.perform_caching = false
 
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log

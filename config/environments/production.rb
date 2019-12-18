@@ -63,25 +63,44 @@ Rails.application.configure do
   # config.active_job.queue_adapter     = :resque
   # config.active_job.queue_name_prefix = "taisei_portfolio_#{Rails.env}"
 
+# MAiler
+  # Don't care if the mailer can't send.
+  config.action_mailer.raise_delivery_errors = true
+  config.action_mailer.default_url_options = { host:'localhost', port: '3000' }
+  config.action_mailer.delivery_method = :sendmail
+  #send email in dev mode
+  config.action_mailer.perform_deliveries = true
   config.action_mailer.perform_caching = false
+  config.action_mailer.raise_delivery_errors= true
+
+  config.action_mailer.sendmail_settings = {
+    address:              'smtp.gmail.com',
+    port:                 587,
+    domain:               'gmail.com',
+    user_name:            ENV["GMAIL_EMAIL"],
+    password:             ENV["GMAIL_PASSWORD"],
+    authentication:       'plain',
+    enable_starttls_auto: true  }
+
+  # config.action_mailer.perform_caching = false
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
   # config.action_mailer.raise_delivery_errors = false
 
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.default_url_options = { host:'taiseiyamada.herokuapp.com' }
-  config.action_mailer.perform_deliveries = true
-  config.action_mailer.raise_delivery_errors = true
-  config.action_mailer.default :charset => "utf-8"
-  ActionMailer::Base.smtp_settings = {
-      address: "smtp.gmail.com",
-      port: 587,
-      user_name: ENV['GMAIL_ADDRESS'],
-      password: ENV['GMAIL_APP_PASSWORD'],
-      authentication: 'plain',
-      enable_starttls_auto: true
-  }
+  # config.action_mailer.delivery_method = :smtp
+  # config.action_mailer.default_url_options = { host:'taiseiyamada.herokuapp.com' }
+  # config.action_mailer.perform_deliveries = true
+  # config.action_mailer.raise_delivery_errors = true
+  # config.action_mailer.default :charset => "utf-8"
+  # ActionMailer::Base.smtp_settings = {
+  #     address: "smtp.gmail.com",
+  #     port: 587,
+  #     user_name: ENV['GMAIL_ADDRESS'],
+  #     password: ENV['GMAIL_APP_PASSWORD'],
+  #     authentication: 'plain',
+  #     enable_starttls_auto: true
+  # }
 
   # Enable locale fallbacks for I18n (makes lookups for any locale fall back to
   # the I18n.default_locale when a translation cannot be found).
