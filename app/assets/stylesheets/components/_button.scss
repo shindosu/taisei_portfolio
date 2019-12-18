@@ -33,3 +33,32 @@
     box-shadow:none;
   }
 }
+
+
+.button-link{
+  font-size: 0.7em;
+  transition-duration: 0.2s;
+  &:hover{
+    color: white;
+  }
+  &:focus{
+    box-shadow:none;
+  }
+}
+
+.card-buttonholder{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border: 1px solid #ED6C6C;
+  left: 0;
+  width: 40%;
+  margin: 0 auto;
+  transition-duration: 0.2s;
+  &:hover{
+    background-color: $red;
+  }
+  &:focus{
+    box-shadow:none;
+  }
+}
