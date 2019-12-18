@@ -31,19 +31,25 @@ Rails.application.configure do
   # Don't care if the mailer can't send.
   config.action_mailer.raise_delivery_errors = true
   config.action_mailer.default_url_options = { host:'localhost', port: '3000' }
-  config.action_mailer.delivery_method = :sendmail
+  config.action_mailer.delivery_method = :mailgun
   #send email in dev mode
   config.action_mailer.perform_deliveries = true
   config.action_mailer.perform_caching = false
   config.action_mailer.raise_delivery_errors= true
+  config.action_mailer.mailgun_settings = {
+    api_key: 'cadc099e311db879a9b18abf474e6f39-f8b3d330-e22b054d',
+    domain: 'sandbox59a01f4416d643679f4fdda55074af97.mailgun.org',
+    # api_host: 'api.eu.mailgun.net'  # Uncomment this line for EU region domains
+  }
+  # ActionMailer::Base.mailgun_settings = {
+  #   address:              'smtp.mailgun.org',
+  #   port:                 587,
+  #   user_name:            ENV["MAILGUN_SMTP_USER_NAME"],
+  #   password:             ENV["MAILGUN_SMTP_PASSWORD"],
+  #   authentication:       'plain',
+  #   enable_starttls_auto: true  }
 
-  ActionMailer::Base.sendmail_settings = {
-    address:              'smtp.gmail.com',
-    port:                 587,
-    user_name:            ENV["GMAIL_EMAIL"],
-    password:             ENV["GMAIL_PASSWORD"],
-    authentication:       'plain',
-    enable_starttls_auto: true  }
+        # domain:               'gmail.com',
 
   config.action_view.embed_authenticity_token_in_remote_forms = true
 
