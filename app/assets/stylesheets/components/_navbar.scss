@@ -1,16 +1,21 @@
-.nav{
+.navbar{
   position: absolute;
-  left: 0;
+  margin: 24px 0 0 24px;
+}
+
+.navbar-list{
+  list-style: none;
 }
 
 .logo{
-  width: 82px;
-  height: 82px;
+  width: 90px;
+  height: 90px;
 }
 
 .not-logo-link{
   position: relative;
   top: 55px;
+  margin: 0 0 24px 24px;
 }
 
 .nav-link{
@@ -36,4 +41,25 @@
   top: 70px;
   background-color: none;
   border: 0;
+}
+
+@media only screen and (max-width: 992px){
+  .not-logo-link {
+    position: relative;
+    top: 55px;
+    margin: 0 0 24px 0;
+  }
+}
+@media only screen and (max-width: 768px){
+
+}
+@media only screen and (max-width: 576px){
+  .logo{
+    display: none;
+  }
+}
+@media only screen and (max-width: 400px){
+  .nav{
+    margin: 0;
+  }
 }

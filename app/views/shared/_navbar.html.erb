@@ -1,21 +1,31 @@
-<ul class="nav flex-column w-25 ml-5 mt-4">
-  <li class="nav-item">
-    <%= link_to root_path do %>
+<nav class="navbar navbar-expand-sm navbar-light p-0">
+  <button class="hamburger hamburger--slider navbar-toggler mt-3" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="hamburger-box">
+      <span class="hamburger-inner"></span>
+    </span>
+  </button> 
+
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-list p-0">
+      <li class="nav-item">
+            <%= link_to root_path do %>
       <%= image_tag 'logo', class: "logo" %>
     <% end %>
-  </li>
-  <li class="nav-item m-3 w-25 not-logo-link">
-    <% if current_page?(projects_path)%>
-      <%= link_to 'Projects', projects_path, class: "active-link"%>
-    <% else %>
-      <%= link_to 'Projects', projects_path, class: "nav-link"%>
-    <% end %>
-  </li>
-  <li class="nav-item m-3 w-25 not-logo-link">
-    <% if current_page?(new_contact_path)%>
-      <%= link_to 'Contacts', new_contact_path, class: "active-link"%>
-    <% else %>
-      <%= link_to 'Contacts', new_contact_path, class: "nav-link"%>
-    <% end %>
-  </li>
-</ul>
+      </li>
+      <li class="nav-item not-logo-link">
+        <% if current_page?(projects_path)%>
+          <%= link_to 'Projects', projects_path, class: "active-link"%>
+        <% else %>
+          <%= link_to 'Projects', projects_path, class: "nav-link"%>
+        <% end %>
+      </li>
+      <li class="nav-item not-logo-link">
+        <% if current_page?(new_contact_path)%>
+          <%= link_to 'Contacts', new_contact_path, class: "active-link"%>
+        <% else %>
+          <%= link_to 'Contacts', new_contact_path, class: "nav-link"%>
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</nav>
