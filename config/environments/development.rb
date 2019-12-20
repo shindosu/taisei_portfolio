@@ -44,8 +44,8 @@ Rails.application.configure do
   # ActionMailer::Base.mailgun_settings = {
   #   address:              'smtp.mailgun.org',
   #   port:                 587,
-  #   user_name:            ENV["MAILGUN_SMTP_USER_NAME"],
-  #   password:             ENV["MAILGUN_SMTP_PASSWORD"],
+  #   user_name:            ENV["MAILGUN_API_KEY"],
+  #   password:             ENV["MAILGUN_DOMAIN"],
   #   authentication:       'plain',
   #   enable_starttls_auto: true  }
 
