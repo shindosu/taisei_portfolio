@@ -1,10 +1,15 @@
 // Specific CSS for your home-page
 
+#circle-container{
+  height: 80vh;
+}
+
 .circle{
+  min-width: 366px;
+  min-height: 366px;
   width: 40vw;
   display: table;
   border-radius: 50%;
-  margin: 0 auto;
   background: linear-gradient(285deg, rgba(236,90,90,1) 0%, rgba(237,108,108,1) 24%, rgba(255,173,173,1) 100%);
 }
 
@@ -14,16 +19,4 @@
 	height:0;
 	width:1px;
 	margin:100% 0 0;	
-}
-@media only screen and (max-width: 992px){
-  
-}
-@media only screen and (max-width: 768px){
-
-}
-@media only screen and (max-width: 600px){
-
-}
-@media only screen and (max-width: 600px){
-
 }
