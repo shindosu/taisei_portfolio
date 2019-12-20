@@ -1,4 +1,4 @@
-.right-side, .left-side{
+.right-side, .left-side, .about-side{
   font-size: 1.3em;
   a, p{
   color: black;
@@ -20,6 +20,20 @@
     }
   }
 }     
+}
+
+.left-side{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0 0 24px 48px;
+}
+
+.right-side{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 48px 24px 0;
 }
 
 #about{
