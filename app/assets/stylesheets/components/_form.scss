@@ -11,4 +11,12 @@
   border-radius: 0;
   color: #A0A0A0;
   margin-bottom: 7%;
+  background-color: white !important;
+  background-image: none !important;
+  &:focus{
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgb(238, 203, 203);
+    border-color: $red;
+    background-image: none;
+  }
 }
