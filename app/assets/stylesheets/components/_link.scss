@@ -24,7 +24,7 @@
 
 .left-side{
   position: absolute;
-  bottom: -50px;
+  bottom: 0;
   left: 0;
   margin: 0 0 24px 48px;
   h1{
@@ -39,7 +39,7 @@
 
 .right-side{
   position: absolute;
-  bottom: -50px;
+  bottom: 0;
   right: 0;
   margin: 0 48px 24px 0;
 }
@@ -80,5 +80,9 @@
   .right-side, .left-side{
     margin: 0;
     font-size: 1.0em
+  }
+
+  #contact-left, #contact-right{
+    bottom: -100px;
   }
 }
