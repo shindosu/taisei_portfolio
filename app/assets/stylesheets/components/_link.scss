@@ -24,7 +24,7 @@
 
 .left-side{
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   left: 0;
   margin: 0 0 24px 48px;
   h1{
@@ -39,7 +39,7 @@
 
 .right-side{
   position: absolute;
-  bottom: 0;
+  bottom: -50px;
   right: 0;
   margin: 0 48px 24px 0;
 }
@@ -72,7 +72,7 @@
   }
 
   #project-link-repsonsive{
-    top: -50px;
+    top: 0;
     right: 0;
     margin: 0 16px 24px 0;
   }
