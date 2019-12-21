@@ -8,9 +8,23 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-list p-0">
       <li class="nav-item">
-            <%= link_to root_path do %>
-      <%= image_tag 'logo', class: "logo" %>
-    <% end %>
+        <%= link_to root_path do %>
+          <%= image_tag 'logo', class: "logo" %>
+        <% end %>
+      </li>
+      <li class="nav-item not-logo-link responsive-link">
+        <% if current_page?(root_path)%>
+          <%= link_to 'Home', root_path, class: "active-link"%>
+        <% else %>
+          <%= link_to 'Home', root_path, class: "nav-link"%>
+        <% end %>
+      </li>
+      <li class="nav-item not-logo-link responsive-link">
+        <% if current_page?(about_path)%>
+          <%= link_to 'About', about_path, class: "active-link"%>
+        <% else %>
+          <%= link_to 'About', about_path, class: "nav-link" %>
+        <% end %>
       </li>
       <li class="nav-item not-logo-link">
         <% if current_page?(projects_path)%>

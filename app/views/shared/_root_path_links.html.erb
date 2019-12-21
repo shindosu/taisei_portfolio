@@ -1,9 +1,9 @@
 <% if current_page?(root_path) %>
-  <div class="left-side">
-    <h1 class="ml-3">Taisei</h1>
-    <p class="ml-3">Full Stack Developer</p>
+  <div class="left-side" id="intro-description">
+    <h1>Taisei</h1>
+    <p>Full Stack Developer</p>
   </div>
-  <div class="right-side">
+  <div class="right-side" id="project-link-repsonsive">
     <%= link_to projects_path do %>
       <p class="m-4">Projects <i class="fas fa-arrow-right fa-sm arrow ml-2"></i></p>
     <% end %>  

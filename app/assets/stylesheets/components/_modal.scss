@@ -1,3 +1,7 @@
+.list-group{
+  margin-left: 24px;
+}
+
 .list-group-item{
   font-size: 0.8em;
   color: #535353;
@@ -37,5 +41,19 @@
   }
   p{
     color: black;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .list-group{
+    margin-left: 8px;
+  }
+
+  .list-group-item{
+    font-size: 0.5em;
+  }
+
+  .responsive-or-not{
+    font-size: 0.5em;
   }
 }

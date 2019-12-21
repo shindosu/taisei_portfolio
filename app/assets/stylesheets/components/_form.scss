@@ -20,3 +20,16 @@
     background-image: none;
   }
 }
+
+#contact_message{
+  height: 150px;
+}
+
+@media only screen and (max-width: 400px){
+
+  #new_contact{
+    margin: 0 auto;
+    width: 80%;
+  }
+
+}

@@ -8,17 +8,16 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <%= stylesheet_link_tag 'application', media: 'all' %>
+    <link rel="stylesheet" href="node_modules/select2/dist/css/select2.css">
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
     <%= render "shared/about_link" %>
     <%= render "shared/navbar" %>
     <%= yield %>
-
     <%= render 'shared/root_path_links' %>
     <%= render 'shared/projects_path_links' %>
     <%= render 'shared/contact_path_links' %>
-
     <%= javascript_include_tag 'application' %>
     <%= javascript_pack_tag 'application' %>
   </body>

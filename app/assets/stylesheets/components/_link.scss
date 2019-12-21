@@ -27,7 +27,15 @@
   bottom: 0;
   left: 0;
   margin: 0 0 24px 48px;
+  h1{
+    letter-spacing: 0.06em; 
+  }
+
+  h1, p{
+    color: black;
+  }
 }
+
 
 .right-side{
   position: absolute;
@@ -55,6 +63,22 @@
 }
 @media only screen and (max-width: 400px){
   #about{
-    margin: 18px 0 0 0;
+    margin: 24px 0 0 0;
+    display: none;
+  }
+
+  .navbar{
+    margin: 0 0 0 24px;
+  }
+
+  #project-link-repsonsive{
+    top: 0;
+    right: 0;
+    margin: 0 16px 24px 0;
+  }
+
+  .right-side, .left-side{
+    margin: 0;
+    font-size: 1.0em
   }
 }

@@ -18,6 +18,10 @@
   margin: 0 0 24px 24px;
 }
 
+.responsive-link{
+  display: none;
+}
+
 .nav-link{
   color: black;
   transition-duration: 0.2s;
@@ -66,5 +70,10 @@
 @media only screen and (max-width: 400px){
   .nav{
     margin: 0;
+    z-index: 1;
+  }
+
+  .responsive-link{
+    display: block;
   }
 }
