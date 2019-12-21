@@ -1,0 +1,16 @@
+.skill-set{
+  display: flex;
+  justify-content: center;
+}
+
+.dropdown-filter{
+  display: none;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 400px){
+  #project-container{
+    margin-top: 140px;
+  }
+}
+

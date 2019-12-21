@@ -4,14 +4,14 @@
       <div class="modal-body p-0">
         <%= render 'shared/carousel', project: project%>
         <div class="skill-used">
-          <ul class="list-group list-group-horizontal-sm ml-4">
+          <ul class="list-group list-group-horizontal">
             <% project.skill.gsub('"', '').gsub(/(\[|\]|)/,"").split(",").each do |skill| %>
               <li class="list-group-item mr-3 mt-2 border border-danger py-1 px-2 d-flex align-items-center"><p class="m-0"><%= skill %></p></li>
             <% end %>
             <% if project.responsiveness %>
-              <li class="mr-3 mt-2 py-1 px-2 d-flex align-items-center responsive"><p class="m-0">RESPONSIVE</p></li>
+              <li class="mr-3 mt-2 py-1 px-2 d-flex align-items-center responsive responsive-or-not"><p class="m-0">RESPONSIVE</p></li>
             <% else %>
-              <li class="mr-3 mt-2 py-1 px-2 d-flex align-items-center not-responsive"><p class="m-0">NOT RESPONSIVE</p></li>
+              <li class="mr-3 mt-2 py-1 px-2 d-flex align-items-center not-responsive responsive-or-not"><p class="m-0">NOT RESPONSIVE</p></li>
             <% end %>
           </ul>
         </div>

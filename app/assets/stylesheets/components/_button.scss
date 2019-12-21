@@ -1,6 +1,9 @@
 .skill-set{
   .btn{
     transition-duration: 0.2s;
+    padding-right: 24px;
+    padding-left: 24px;
+    margin-right: 24px;
     &:hover{
       color: $red;
     }
@@ -60,5 +63,16 @@
   }
   &:focus{
     box-shadow:none;
+  }
+}
+
+@media only screen and (max-width: 400px){
+  .skill-set{
+    .btn{
+    font-size: 0.7em;      
+    margin: 0;
+    padding-right: 10px;
+    padding-left: 10px;
+    }
   }
 }
