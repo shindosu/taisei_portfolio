@@ -66,6 +66,17 @@
   }
 }
 
+@media only screen and (max-width: 925px){
+  .skill-set{
+    .btn{
+    font-size: 1em;      
+    margin-right: 16px;
+    padding-right: 10px;
+    padding-left: 10px;
+    }
+  }
+  
+}
 @media only screen and (max-width: 400px){
   .skill-set{
     .btn{
