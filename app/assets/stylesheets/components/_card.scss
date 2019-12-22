@@ -42,6 +42,7 @@
 }
 
 .card-description{
+  margin-top: 8px;
   font-size: 0.8em;
   color: black;
   width: 100%;
@@ -61,15 +62,6 @@
   .card{
     width: 170px;
   }
-
-  .card-title{
-    font-size: 0.8em;
-  }
-  
-  .card-description{
-    font-size: 0.5em;
-    color: black;
-  }
 }
 @media only screen and (max-width: 767px){
   .card{
@@ -78,6 +70,14 @@
 
   .card-holder{
     margin: 0 auto;
+  }
+
+  .card-title{
+    font-size: 0.8em;
+  }
+  
+  .card-description{
+    font-size: 0.5em;
   }
 }
 @media only screen and (max-width: 400px){
@@ -93,8 +93,9 @@
     margin-right: 0;
     margin-bottom: 30px;
   }
-
+  
   .card-description{
     display: none;
+    color: black;
   }
 }
