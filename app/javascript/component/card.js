@@ -8,9 +8,7 @@ const changeOpacity = () => {
   
     card_array.forEach(element => {
       element.addEventListener("mouseover", (event) => {
-        if(viewportWidth < 400){
-          element.querySelector(".card-image").style.opacity = 0.04;
-        } 
+        element.querySelector(".card-image").style.opacity = 0.04;
         element.querySelector(".card-description").classList.remove('d-none');
         element.querySelector(".card-buttonholder").classList.remove('d-none');
         element.querySelector(".card-title").style.top = "10%";

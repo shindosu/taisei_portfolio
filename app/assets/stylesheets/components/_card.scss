@@ -41,12 +41,16 @@
   color: $red;
 }
 
-.card-description{
+.card-catch-phrase{
   margin-top: 8px;
+}
+
+.card-description{
   font-size: 0.8em;
   color: black;
   width: 100%;
 }
+
 
 @media only screen and (max-width: 1200px){
 
@@ -62,6 +66,15 @@
   .card{
     width: 170px;
   }
+
+  .card-title{
+    font-size: 0.8em;
+  }
+  
+  .card-catch-phrase{
+    margin-top: 4px;
+    font-size: 0.5em;
+  }
 }
 @media only screen and (max-width: 767px){
   .card{
@@ -70,14 +83,6 @@
 
   .card-holder{
     margin: 0 auto;
-  }
-
-  .card-title{
-    font-size: 0.8em;
-  }
-  
-  .card-description{
-    font-size: 0.5em;
   }
 }
 @media only screen and (max-width: 400px){
