@@ -1,9 +1,7 @@
 <div class="container" id="project-container">
 <div class="skill-set">
   <% @skills.each_with_index do |skill, index| %>
-    <% if skill == "Search" %>
-      <p class="btn" id="search"><i class="fas fa-search"></i></p>
-    <% elsif skill == "All" %>
+    <% if skill == "All" %>
       <%= link_to skill, projects_path, class: "btn btn-danger h-100 rounded-0", remote: true%>
     <% else %>
       <%= link_to skill, projects_path(skill: skill), class: "btn h-100 rounded-0", remote: true %>

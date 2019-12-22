@@ -21,6 +21,8 @@
 
 .card-image{
   transition-duration: 0.3s;
+  height: 103%;
+  width: 250px;
 }
 
 .card-title, .card-description, .card-catch-phrase{
@@ -45,14 +47,29 @@
   width: 100%;
 }
 
-@media only screen and (max-width: 992px){
-  
-}
-@media only screen and (max-width: 768px){
+@media only screen and (max-width: 1200px){
 
-}
-@media only screen and (max-width: 600px){
+  .card-holder{
+    margin: 0 170px;
+  }
 
+  .card{
+    width: 200px;
+  }
+}
+@media only screen and (max-width: 900px){
+  .card{
+    width: 170px;
+  }
+}
+@media only screen and (max-width: 767px){
+  .card{
+    width: 150px;
+  }
+
+  .card-holder{
+    margin: 0 auto;
+  }
 }
 @media only screen and (max-width: 400px){
 
@@ -63,23 +80,8 @@
   .card{
     width: 130px;
     height: auto;
-    margin: 0;
     margin-left: 31px;
     margin-right: 0;
     margin-bottom: 30px;
-  }
-
-  .card-buttonholder{
-    width: 45%;
-    height: 24%;
-  }
-
-  .card-title{
-    font-size: 0.8em;
-  }
-  
-  .card-catch-phrase{
-    font-size: 0.5em;
-    margin-top: 5px;
   }
 }

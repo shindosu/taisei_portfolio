@@ -58,20 +58,9 @@
     margin-left: 36px;
   }
 }
-@media only screen and (max-width: 768px){
-
-}
-@media only screen and (max-width: 576px){
-  .logo{
-    display: none;
-  }
-
-}
-@media only screen and (max-width: 400px){
-
+@media only screen and (max-width: 767px){
   .navbar{
     margin: 0;
-    z-index: 1;
     height: 100vh;
     width: 60%;
   }
@@ -82,4 +71,20 @@
   .nav-link{
     color:white;
   }
+
+  .navbar-collapse{
+    position: absolute;
+    top: 80px;
+  }
+
+  .logo{
+    display: none;
+  }
+}
+@media only screen and (max-width: 576px){
+
+
+}
+@media only screen and (max-width: 400px){
+
 }
