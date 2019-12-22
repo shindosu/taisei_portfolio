@@ -42,6 +42,7 @@
 .card-description{
   font-size: 0.8em;
   color: black;
+  width: 100%;
 }
 
 @media only screen and (max-width: 992px){
@@ -66,5 +67,19 @@
     margin-left: 31px;
     margin-right: 0;
     margin-bottom: 30px;
+  }
+
+  .card-buttonholder{
+    width: 45%;
+    height: 24%;
+  }
+
+  .card-title{
+    font-size: 1em;
+  }
+  
+  .card-catch-phrase{
+    font-size: 0.5em;
+    margin-top: 5px;
   }
 }
