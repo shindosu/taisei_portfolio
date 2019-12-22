@@ -55,7 +55,7 @@
   }
 
   .not-logo-link{
-    margin-left: 24px;
+    margin-left: 36px;
   }
 }
 @media only screen and (max-width: 768px){
@@ -72,9 +72,14 @@
   .navbar{
     margin: 0;
     z-index: 1;
+    height: 100vh;
+    width: 60%;
   }
 
   .responsive-link{
     display: block;
+  }
+  .nav-link{
+    color:white;
   }
 }

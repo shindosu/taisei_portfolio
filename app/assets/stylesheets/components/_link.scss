@@ -51,6 +51,10 @@
   margin: 48px;  
   }
 
+.navbar-collapse{
+  position: absolute;
+  top: 80px;
+}
 
 @media only screen and (max-width: 992px){
   
@@ -65,10 +69,6 @@
   #about{
     margin: 24px 0 0 0;
     display: none;
-  }
-
-  .navbar{
-    margin: 0 0 0 24px;
   }
 
   #project-link-repsonsive{
