@@ -45,19 +45,19 @@ Project.create!(
   skill: %w(HTML CSS Javascript Ruby\ on\ Rails Action\ Cable),
   responsiveness: false,
   code_link: "github.com/shindosu/ronpa",
-  demo_link: "ronpa.org"
+  demo_link: "ronpas.herokuapp.com/"
 )
 
-def send_simple_message
-  RestClient.post "https://api:cadc099e311db879a9b18abf474e6f39-f8b3d330-e22b054d"\
-  "@api.mailgun.net/v3/sandbox59a01f4416d643679f4fdda55074af97.mailgun.org/messages",
-  :from => "Excited User <mailgun@sandbox59a01f4416d643679f4fdda55074af97.mailgun.org>",
-  :to => "taiseiyamadashindosu@gmail.com",
-  :subject => "Hello",
-  :text => "Testing some Mailgun awesomness!"
-  puts "message sent!"
-end
+# def send_simple_message
+#   RestClient.post "https://api:cadc099e311db879a9b18abf474e6f39-f8b3d330-e22b054d"\
+#   "@api.mailgun.net/v3/sandbox59a01f4416d643679f4fdda55074af97.mailgun.org/messages",
+#   :from => "Excited User <mailgun@sandbox59a01f4416d643679f4fdda55074af97.mailgun.org>",
+#   :to => "taiseiyamadashindosu@gmail.com",
+#   :subject => "Hello",
+#   :text => "Testing some Mailgun awesomness!"
+#   puts "message sent!"
+# end
 
-send_simple_message
+# send_simple_message
 
 puts "Done! Created #{Project.count} projects"
